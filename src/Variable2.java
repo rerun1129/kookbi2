@@ -2,7 +2,8 @@ public class Variable2 {
 
     int num1 = 100;
     int num2 = 200;
-    final int num3 = 300;
+    final int NUM3 = 300;
+
 
 
     public void method1(){
@@ -12,7 +13,7 @@ public class Variable2 {
 
         System.out.println("전역 변수 :" + num1);
         System.out.println("지역 변수 :" + num2);
-        System.out.println("상수 :" + num3);
+        System.out.println("상수 :" + NUM3);
 
     }
     public void method2(){
