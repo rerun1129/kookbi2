@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class menu {
-    int n = 8;
+    int n = 10;
     int[] price = new int[n];
     String[] name = new String[n];
 
@@ -18,6 +18,7 @@ public class menu {
                 price[i] = in.nextInt();
                 i++;
             }
+            in.close();
         } catch (FileNotFoundException e) {
             System.out.println("No file");
         }
@@ -40,23 +41,15 @@ public class menu {
 
     public void list(int a) {
 
-        if (a < price[0]) {
-            System.out.println("주문 가능한 음료수가 없습니다.");
-            System.out.println("현재 투입액은 " + a + "원 입니다.");
-        } else if (a < price[1]) {
-            inPrice(a, 1);
-        } else if (a < price[2]) {
-            inPrice(a, 2);
-        } else if (a < price[3]) {
-            inPrice(a, 3);
-        } else if (a < price[4]) {
-            inPrice(a, 4);
-        } else if (a < price[5]) {
-            inPrice(a, 5);
-        } else if (a < price[6]) {
-            inPrice(a, 6);
-        } else {
-            inPrice(a, n-1);
+        for (int i = 1; i < n; i++) {
+            if (a < price[0]) {
+                System.out.println("주문 가능한 음료수가 없습니다.");
+                System.out.println("현재 투입액은 " + a + "원 입니다.");
+                break;
+            } else if (a < price[i]) {
+                inPrice(a, i);
+                break;
+            }
         }
     }
 }
