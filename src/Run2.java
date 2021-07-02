@@ -4,6 +4,6 @@ public class Run2 {
         //iv.myInputMethod();
         //new calcC().testMethod();
         //new  calcGL().test3();
-        new calcMy().test();
+        //new calcMy().test();
     }
 }
