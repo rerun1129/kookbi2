@@ -5,5 +5,6 @@ public class Run2 {
         //new calcC().testMethod();
         //new  calcGL().test3();
         //new calcMy().test();
+        new game().playGame();
     }
 }
