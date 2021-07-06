@@ -7,6 +7,7 @@ public class TestMain {
         //new Practice().example1();
         //new Practice().example2();
         //new Practice().scoreCalculator();
-        new Practice().menuViewer();
+        //new Practice().menuViewer();
+
     }
 }
