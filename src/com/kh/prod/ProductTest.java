@@ -13,5 +13,6 @@ public class ProductTest {
         p.setQuantity(in.nextInt());
 
         System.out.println(p.information());
+        System.out.println("총 구매 가격 : " + p.getPrice()*p.getQuantity()+ " 원");
     }
 }

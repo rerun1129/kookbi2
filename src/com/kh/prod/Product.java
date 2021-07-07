@@ -14,11 +14,11 @@ public class Product {
         this.quantity = quantity;
     }
     public String information(){
-        System.out.println("상품명 : " + getName());
-        System.out.println("가격 : " + getPrice() + " 원");
-        System.out.println("수량 : " + getQuantity() + "개 ");
+        System.out.println("상품명 : " + name);
+        System.out.println("가격 : " + price + " 원");
+        System.out.println("수량 : " + quantity + "개 ");
 
-     return "총 구매 가격 : " + (getPrice()*getQuantity()) + " 원";
+     return "";
     }
 
 
