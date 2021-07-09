@@ -12,11 +12,12 @@ public class Product {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
+
     }
     public String information(){
         System.out.println("상품명 : " + name);
         System.out.println("가격 : " + price + " 원");
-        System.out.println("수량 : " + quantity + "개 ");
+        System.out.print("수량 : " + quantity + "개 ");
 
      return "";
     }
