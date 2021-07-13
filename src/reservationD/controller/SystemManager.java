@@ -16,18 +16,11 @@ public class SystemManager {
         System.out.println("");
         System.out.print("승객정보를 삭제할 좌석번호를 선택하세요.");
         int i = in.nextInt();
-        if (arr[i-1].getNumber() == 0) {
+        if (arr[i - 1].getNumber()==0) {
             System.out.println("이미 삭제되었거나 예약되지 않은 좌석입니다..");
             return;
         }
-        arr[i - 1].setName(null);
-        arr[i - 1].setSex(null);
-        arr[i - 1].setGrade(null);
-        arr[i - 1].setNumber(0);
-        arr[i - 1].setTime(null);
-        arr[i - 1].setDeparture(null);
-        arr[i - 1].setArrival(null);
-
+        arr[i - 1] = null;
         System.out.println("");
         System.out.println("삭제되었습니다.");
         n--;
@@ -39,7 +32,7 @@ public class SystemManager {
         System.out.print("확인할 승객의 좌석번호를 입력하세요.");
         System.out.println("");
         int i = in.nextInt();
-        if (arr[i-1].getNumber() == 0) {
+        if (arr[i - 1].getNumber()==0) {
             System.out.println("예약되지 않은 좌석번호입니다.");
             return;
         }
@@ -67,7 +60,7 @@ public class SystemManager {
             System.out.println("");
             System.out.println(i + "번 좌석은 예약 불가능합니다.");
             System.out.println("");
-        } else if (arr[i - 1].getNumber() == 0) {
+        } else if (arr[i - 1].getNumber()==0) {
             System.out.println("");
             System.out.println(i + "번 좌석은 예약 가능합니다.");
             System.out.println("");

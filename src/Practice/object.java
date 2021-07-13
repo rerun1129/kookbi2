@@ -5,5 +5,11 @@ public class object {
         protected int age;   // 나이
         char gender;         // 성별
         private String tel;  // 연락처
+
+        final int m = 0;
+
+
+
+
 }
 
