@@ -36,11 +36,11 @@ public class Employee extends Person{
     @Override
     public String information() {
         return "이름='" + name + '\'' +
-                ", 부서=" + getDept() +
+                ", 부서=" + dept +
                 ", 나이=" + getAge() +
                 ", 몸무게=" + getWeight() +
                 ", 신장=" + getHeight() +
-                ", 급여='" + getSalary() + '\''
+                ", 급여='" + salary + '\''
                 ;
     }
 }

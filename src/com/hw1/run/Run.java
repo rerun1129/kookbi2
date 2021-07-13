@@ -3,6 +3,8 @@ package com.hw1.run;
 import com.hw1.model.vo.Employee;
 import com.hw1.model.vo.Student;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Run {
@@ -20,11 +22,14 @@ public class Run {
     public void eInfo(){
         Employee [] e = new Employee[10];
         int n = 0;
-        Scanner in = new Scanner(System.in);
+        Scanner in = null;
+        try {
+            in = new Scanner(new File("data1.txt"));
+        } catch (FileNotFoundException fileNotFoundException) {
+            System.out.println("파일이 없습니다.");
+        }
 
-        String str;
-        do{
-            System.out.println("사원 정보를 입력하세요.");
+        while (in.hasNext()){
             e[n] = new Employee();
             e[n].setName(in.next());
             e[n].setAge(in.nextInt());
@@ -35,9 +40,7 @@ public class Run {
 
             n++;
 
-            System.out.println("계속 입력하시겠습니까?");
-            str = in.next();
-        }while (str.equals("y"));
+        }
         for (int i = 0; i<n; i++){
         System.out.println(e[i].information());
         }
@@ -48,6 +51,5 @@ public class Run {
         Run app = new Run();
         app.sInfo();
         app.eInfo();
-
     }
 }
