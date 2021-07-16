@@ -22,7 +22,7 @@ public class BankMenu {
         BankManager bm = new BankManager();
 
         int cn;
-        cn = bm.logIn(bank, 5);
+        cn = bm.logIn(bank);
 
         do {
             Scanner sc = new Scanner(System.in);

@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class BankManager {
 
-    BankMenu bm = new BankMenu();
+
 
     int count = 5;
 
@@ -19,19 +19,19 @@ public class BankManager {
 
     }
 
-    public int logIn(Bank[] data, int n) {
+    public int logIn(Bank[] data) {
 
         Scanner in = new Scanner(System.in);
         System.out.print("계좌번호 : ");
         String ac = in.next();
         int i;
-        for (i = 0; i < n; ) {
+        for (i = 0; i < data.length; ) {
             if (data[i].getAccount().equals(ac)) {
                 break;
             } else if (!data[i].getAccount().equals(ac)) {
                 i++;
             }
-            if (i == n) {
+            if (i == data.length) {
                 System.out.println("계좌번호 오류.");
                 i = 0;
                 System.out.print("계좌번호 : ");
